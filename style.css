@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    background: linear-gradient(rgba(250,131,238, 0.7),transparent),url('shop.png');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.logo{
+    width: 170px;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+	font-size: 20px;
+    font-weight: 500;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height:3px;
+    position: absolute;
+    bottom: -5px;
+    background: blue;
+    left:50%;
+    transform: translateX(-50%);
+    transition: width .3s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.text{
+    color:black;
+    position: absolute;
+    bottom: 5%;
+}
+
+.text p{
+    font-size: 50px;
+    font-weight: 550;
+}
+
+.text h1{
+    font-size: 90px;
+    line-height: 130px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 4px blue;
+    background: url("animation.png");
+     -webkit-background-clip : text;
+    background-position: 0 0;
+    animation: animate 70s linear infinite;
+}
+
+@keyframes animate{
+    100%{
+        background-position: 20000px 0;
+
+    }
+
+}
+
+.text .btn{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.text a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid ;
+    text-align: center;
+    display: flex;
+}
+
+.text a:hover{
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-bottom: 4px solid;
+    text-align: center;
+    display: flex;
+    background: blue;
+}
